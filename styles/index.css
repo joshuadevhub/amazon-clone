@@ -105,7 +105,7 @@ header .header-container {
 }
 
 .side-bar .section1 li:last-child {
-  font-size: 2rem;
+  font-size: 1.1rem;
   width: 120px;
 }
 
@@ -120,13 +120,13 @@ header .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
 .side-bar .section3 li:first-child,
 .side-bar .section4 li.top-dep {
-  font-size: 2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   padding-bottom: 1.8rem;
 }
@@ -141,7 +141,7 @@ header .header-container {
 
 .side-bar .section3 li:last-child,
 .side-bar .section4>li {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .side-bar .section4 {
@@ -151,7 +151,7 @@ header .header-container {
 
 .dropdown-menu .see-all,
 .close {
-  font-size: 1.3rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   vertical-align: middle;
