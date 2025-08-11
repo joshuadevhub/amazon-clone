@@ -20,6 +20,7 @@
 body {
   background-color: var(--background-color);
   min-height: 100vh;
+  height: 100%;
   color: var(--background-color);
 }
 
@@ -54,7 +55,7 @@ header .header-container {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.9);
-  height: 100vh;
+  height: 100%;
   width: 100%;
   /* display: none; */
   flex-direction: column;
