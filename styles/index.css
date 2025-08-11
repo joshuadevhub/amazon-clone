@@ -1,0 +1,46 @@
+:root {
+  --primary-color: #ff9900;
+  /* main buttons & highlights */
+  --secondary-color: #232f3e;
+  /* header & footer */
+  --accent-color: #ff4c4c;
+  /* sale tags, urgent deals */
+  --background-color: #ffffff;
+  --text-color: #111111;
+  --heading-font: "Poppins", sans-serif;
+  --body-font: "Lato", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  min-height: 100vh;
+}
+
+header .header-container {
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.6rem;
+}
+
+.logo img {
+  height: 30px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.header-container li {
+  list-style: none;
+}
+
+.header-container .sign-in {
+  display: flex;
+
+}
