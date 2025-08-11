@@ -106,7 +106,7 @@ header .header-container {
 
 .side-bar .section1 li:last-child {
   font-size: 1.1rem;
-  width: 120px;
+  width: 100px;
 }
 
 .side-bar .section2,
@@ -120,7 +120,7 @@ header .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
