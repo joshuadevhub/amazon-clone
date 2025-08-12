@@ -199,7 +199,7 @@ main .search-icon {
   background-color: var(--secondary-color);
   display: flex;
   padding: 1rem;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .search-icon input {
