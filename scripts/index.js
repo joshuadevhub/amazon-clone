@@ -12,6 +12,18 @@ dropdownMenu.addEventListener("click", () => {
     dropdownContainer.innerText = `See Less`;
   } else {
     dropdownButton.style.transform = "rotate(0deg)";
-    dropdownContainer.innerText = `See More`;
+    dropdownContainer.innerText = `See All`;
   }
 });
+
+const hamBugger = document.getElementById("menu-icon");
+const sideBar = document.getElementById("side-bar");
+const closeIcon = document.getElementById("close-icon");
+
+hamBugger.addEventListener("click", () => {
+  sideBar.style.display = "block";
+});
+
+closeIcon.addEventListener("click", () => {
+  sideBar.style.display = "none";
+})

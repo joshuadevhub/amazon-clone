@@ -24,15 +24,16 @@ body {
   color: var(--background-color);
 }
 
-header .header-container {
-  /* background-color: var(--secondary-color); */
+header .header-container .nav-bar {
+  background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1rem;
+  /* vertical-align: middle; */
 }
 
-.logo img {
+.nav-bar .logo img {
   height: 30px;
   width: auto;
   vertical-align: middle;
@@ -57,7 +58,7 @@ header .header-container {
   background-color: #131a22;
   height: 100%;
   width: 100%;
-  /* display: none; */
+  display: none;
   flex-direction: column;
   z-index: 999;
   align-items: flex-start;

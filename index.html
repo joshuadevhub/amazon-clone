@@ -58,17 +58,58 @@
 
   <header>
     <div class="header-container">
-      <li><a href="#" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-            width="24px" fill="#e3e3e3">
-            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-          </svg></a></li>
+      <div class="nav-bar">
+        <ul>
+          <li id="menu-icon">
+            <a href="#" title="Menu">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#e3e3e3">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="logo">
+          <img src="images/amazon-logo-transparent.png" alt="Amazon Clone Logo" width="100" height="30">
+        </div>
+
+        <div class="sign-in">
+          <p>Sign In</p>
+          <ul>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px"
+                  fill="#e3e3e3">
+                  <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"
+                  fill="#e3e3e3">
+                  <path
+                    d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
 
       <nav>
-        <ul>
-          <div class="side-bar">
-            <div class="section1">
-
-              <li><a href="#">
+        <div class="side-bar" id="side-bar">
+          <div class="section1">
+            <ul>
+              <li>
+                <a href="#">
                   Sign In
                   <span>
                     <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
@@ -79,102 +120,85 @@
                   </span>
                 </a>
               </li>
-
-              <li><a href="#" title="Close Icon">
-                  <span><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"
+              <li id="close-icon">
+                <a href="#" title="Close Icon">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"
                       fill="#e3e3e3">
                       <path
                         d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                     </svg>
-                  </span></a>
+                  </span>
+                </a>
               </li>
+            </ul>
 
-              <div class="browse-header">
-                <span class="small-text">Browse</span>
-                <span class="big-text">Amazon</span>
-              </div>
-
-              <!-- <li> <span style="font-size: 1.3rem; font-weight: bold;">Browse</span> Amazon</li> -->
+            <div class="browse-header">
+              <span class="small-text">Browse</span>
+              <span class="big-text">Amazon</span>
             </div>
+          </div>
 
-
-
-            <div class="section2">
-              <li>Amazon Home
-                <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+          <div class="section2">
+            <ul>
+              <li>
+                Amazon Home
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                     fill="#e3e3e3">
                     <path
                       d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
                   </svg>
                 </span>
               </li>
-            </div>
+            </ul>
+          </div>
 
-            <div class="section3">
-              <li><a href="#">Treanding</a> </li>
-              <li><a href="#">Movers & Shakers</a> </li>
-            </div>
+          <div class="section3">
+            <ul>
+              <li><a href="#">Trending</a></li>
+              <li><a href="#">Movers & Shakers</a></li>
+            </ul>
+          </div>
 
-            <div class="section4">
+          <div class="section4">
+            <ul>
               <li class="top-dep">Top Department</li>
               <li><a href="#">Home</a></li>
               <li><a href="#">Health & Household</a></li>
               <li><a href="#">Books</a></li>
               <li class="last-list"><a href="#">PC</a></li>
+            </ul>
 
-              <div class="dropdown-menu" id="dropdown-menu">
-
-                <li class="see-all"><span id="dropdown-text">See All</span> <span id="dropdown-btn">
+            <div class="dropdown-menu" id="dropdown-menu">
+              <ul>
+                <li class="see-all">
+                  <span id="dropdown-text">See All</span>
+                  <span id="dropdown-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"
                       fill="#e3e3e3">
                       <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
-                    </svg></span>
+                    </svg>
+                  </span>
                 </li>
+              </ul>
 
-                <section class="dropdown-content" id="dropdown-content">
-                  <ul>
-                    <li><a href="#">Garden & Tools</a></li>
-                    <li><a href="#">Electronics</a></li>
-                    <li><a href="#">Health & Pesonal Care</a></li>
-                    <li><a href="#">Food & Grocery</a></li>
-                    <li><a href="#">Automotive</a></li>
-                  </ul>
-                </section>
-
-
-              </div>
-
-
+              <section class="dropdown-content" id="dropdown-content">
+                <ul>
+                  <li><a href="#">Garden & Tools</a></li>
+                  <li><a href="#">Electronics</a></li>
+                  <li><a href="#">Health & Personal Care</a></li>
+                  <li><a href="#">Food & Grocery</a></li>
+                  <li><a href="#">Automotive</a></li>
+                </ul>
+              </section>
             </div>
-        </ul>
+          </div>
+        </div>
       </nav>
-
-
-
-    </div>
-    <!-- 
-      <div class="logo">
-        <img src="images/amazon-logo-transparent.png" alt="Amazon  Clone Logo" width="100" height="30">
-      </div>
-
-      <div class="sign-in">
-        <p>Sign In </p>
-        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px"
-              fill="#e3e3e3">
-              <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-            </svg></a></li>
-      </div>
-
-      <div>
-        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"
-              fill="#e3e3e3">
-              <path
-                d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
-            </svg></a></li>
-      </div> -->
-
     </div>
   </header>
+
 
   <main>
 
