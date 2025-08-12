@@ -250,7 +250,7 @@ main .amazon-links {
 
 .amazon-links li {
   list-style: none;
-  padding: 10px 15px;
+  padding: 10px 1px;
 }
 
 .amazon-links li:hover {
