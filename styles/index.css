@@ -5,7 +5,7 @@
   /* header & footer */
   --accent-color: #ff4c4c;
   /* sale tags, urgent deals */
-  --background-color: #ffff;
+  --background-color: #fff;
   --another-color: #232f3e;
   --text-color: #111111;
   --heading-font: "Poppins", sans-serif;
@@ -226,3 +226,26 @@ main .search-icon {
 }
 
 /* Styles For Amazon Links */
+main .amazon-links {
+  background-color: var(--another-color);
+}
+
+.amazon-links ul {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  overflow-x: auto;
+  justify-content: space-between;
+  white-space: nowrap;
+  padding: 15px;
+}
+
+.amazon-links li {
+  list-style: none;
+  padding: 2px 15px;
+}
+
+.amazon-links li a {
+  color: var(--background-color);
+  text-decoration: none;
+}
