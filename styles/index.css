@@ -22,7 +22,7 @@ body {
   background-color: var(--background-color);
   min-height: 100vh;
   height: 100%;
-  color: var(--background-color);
+  color: var(--text-color);
 }
 
 header .header-container .nav-bar {
@@ -132,6 +132,7 @@ header .header-container .nav-bar {
   justify-content: space-between;
   font-size: 1.3rem;
   font-weight: bold;
+  color: var(--background-color);
 }
 
 .side-bar .section3 li:first-child,
@@ -156,6 +157,7 @@ header .header-container .nav-bar {
 
 .side-bar .section4 {
   padding: 1rem 2rem;
+  color: var(--background-color);
 }
 
 .dropdown-menu .see-all,
