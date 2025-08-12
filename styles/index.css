@@ -194,6 +194,8 @@ header .header-container .nav-bar {
   transition: transform 0.3s ease;
 }
 
+
+
 /* Styles For The Search Icon and Input */
 main .search-icon {
   background-color: var(--secondary-color);
@@ -237,15 +239,29 @@ main .amazon-links {
   overflow-x: auto;
   justify-content: space-between;
   white-space: nowrap;
-  padding: 15px;
+  padding: 2px 6px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.amazon-links ul::-webkit-scrollbar {
+  display: none;
 }
 
 .amazon-links li {
   list-style: none;
-  padding: 2px 15px;
+  padding: 10px 15px;
+}
+
+.amazon-links li:hover {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  /* padding: 10px; */
 }
 
 .amazon-links li a {
   color: var(--background-color);
   text-decoration: none;
+  padding: 14px;
+  border-radius: 18px;
 }
