@@ -271,14 +271,25 @@ main .amazon-links {
 .card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-top: 1rem;
+  gap: 1rem;
+  /* spacing between cards */
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
 }
 
 .card-content img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
+  height: 200px;
   object-fit: cover;
+  /* crops image to fit nicely */
   border-radius: 10px;
+  display: block;
+  /* removes small inline spacing */
+}
+
+.card-content p {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: bold;
 }
