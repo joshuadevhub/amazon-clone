@@ -274,19 +274,33 @@ main .amazon-links {
   overflow-x: auto;
   justify-content: space-between;
   white-space: nowrap;
-  margin-top: 0.6rem;
-  padding: 0 0.8rem;
+  padding: 0.5rem 0;
+  /* padding: 0 0.8rem; */
   -ms-overflow-style: none;
   scrollbar-width: none;
+  /* background-color: black; */
 }
 
 .scroll-content img {
   width: 200px;
-  padding-right: 0.8rem;
+  padding: 0 0.8rem;
   height: 310px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 20px;
   display: block;
+}
+
+.account-profile button {
+  width: 90%;
+  display: block;
+  max-width: 100%;
+  padding: 1rem 0;
+  margin: 1.4rem auto;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  color: var(--background-color);
 }
 
 .card-container {
@@ -298,7 +312,7 @@ main .amazon-links {
   grid-template-columns: repeat(2, 1fr);
   gap: 0.8rem;
   max-width: 900px;
-  margin-top: 0.6rem;
+  /* margin-top: 0.4rem; */
 }
 
 .card-content img {
@@ -307,7 +321,7 @@ main .amazon-links {
   object-fit: cover;
   border-radius: 15px;
   display: block;
-  padding-top: 0.4rem;
+  margin-top: 1.2rem;
 }
 
 .card-content p {
@@ -317,7 +331,7 @@ main .amazon-links {
 }
 
 .card-container>p:last-child {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 1rem;
 }
 
