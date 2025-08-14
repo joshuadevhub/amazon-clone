@@ -270,24 +270,42 @@ main .amazon-links {
 .scroll-content {
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   overflow-x: auto;
-  justify-content: space-between;
   white-space: nowrap;
   padding: 0.5rem 0;
-  /* padding: 0 0.8rem; */
+  gap: 0.8rem;
+  /* consistent space between images */
   -ms-overflow-style: none;
+  /* hide scrollbar IE/Edge */
   scrollbar-width: none;
-  /* background-color: black; */
+  /* hide scrollbar Firefox */
+}
+
+.scroll-content::-webkit-scrollbar {
+  display: none;
+  /* hide scrollbar Chrome/Safari */
 }
 
 .scroll-content img {
-  width: 200px;
-  padding: 0 0.8rem;
-  height: 310px;
+  flex: 0 0 auto;
+  /* don't shrink images */
+  width: 45vw;
+  /* scale with screen width */
+  aspect-ratio: 2 / 4;
+  /* tall uniform look */
   object-fit: cover;
   border-radius: 20px;
   display: block;
+}
+
+/* Padding for first and last images */
+.scroll-content img:first-child {
+  margin-left: 0.8rem;
+}
+
+.scroll-content img:last-child {
+  margin-right: 0.8rem;
 }
 
 .account-profile button {
@@ -313,19 +331,20 @@ main .amazon-links {
 
 .card-contents {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 0.8rem;
-  max-width: 900px;
+  max-width: 100%;
   /* margin-top: 0.4rem; */
 }
 
 .card-content img {
   width: 100%;
-  height: 180px;
+  /* height: 180px; */
   object-fit: cover;
+  aspect-ratio: 3 / 3;
   border-radius: 15px;
   display: block;
-  margin-top: 1.2rem;
+  margin-top: 0.8rem;
 }
 
 .card-content p {
@@ -363,10 +382,6 @@ main {
   margin-bottom: 1rem;
   gap: 1rem;
   /* align-items: center; */
-}
-
-.top-pick-content>div>p:first-child {
-  padding: 0.1rem 0;
 }
 
 .top-pick-content img {
