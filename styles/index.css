@@ -359,19 +359,21 @@ main {
 
 .top-pick-content {
   display: grid;
-  grid-template-columns: 180px auto;
+  grid-template-columns: minmax(40%, 1fr) 1fr;
   margin-bottom: 1rem;
+  gap: 1rem;
   /* align-items: center; */
 }
 
 .top-pick-content>div>p:first-child {
-  padding: 0.5rem 0;
+  padding: 0.1rem 0;
 }
 
 .top-pick-content img {
-  width: 160px;
-  height: 100px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 5px;
+  aspect-ratio: 16 / 9;
   /* padding: 1rem 0; */
 }
