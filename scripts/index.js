@@ -32,70 +32,76 @@ closeIcon.addEventListener("click", () => {
 
 // JavaScript For The First Card Container
 
-const products = [
+const sections = [
   {
-    productTitle: "Score The Best PCs and Accessories",
-    productImg: "images/headphone-original.webp",
-    productDesc: "Laptop",
-    linkDesc: "See More",
+    sectionTitle: "Level Up Your PC Here",
+    products: [
+      { img: "images/headphone-original.webp", desc: "Clothing" },
+      { img: "images/laptop-smal-original.webp", desc: "Tracker" },
+      { img: "images/headphone-original.webp", desc: "Equiptment" },
+      { img: "images/laptop-smal-original.webp", desc: "Deals" },
+    ],
+    linkText: "Shop More",
   },
-
   {
-    productTitle: "Score The Best PCs and Accessories",
-    productImg: "images/laptop-smal-original.webp",
-    productDesc: "Laptop",
-    linkDesc: "See More",
-  },
+    sectionTitle: "Unveil Your Radiance",
+    products: [
+      { img: "images/headphone-original.webp", desc: "Desktop" },
+      { img: "images/laptop-smal-original.webp", desc: "Laptop" },
+      { img: "images/headphone-original.webp", desc: "Hard Drives" },
+      { img: "images/laptop-smal-original.webp", desc: "PC Accessories" },
+    ],
+    linkText: "See More",
+  }
+];
 
-  {
-    productTitle: "Score The Best PCs and Accessories",
-    productImg: "images/headphone-original.webp",
-    productDesc: "Laptop",
-    linkDesc: "See More",
-  },
+createCards(sections);
 
-  {
-    productTitle: "Score The Best PCs and Accessories",
-    productImg: "images/laptop-smal-original.webp",
-    productDesc: "Laptop",
-    linkDesc: "See More",
-  },
-]
-createCard(products);
-function createCard(e) {
-  const cardContainer = document.querySelector(".card-container");
-  cardContainer.innerHTML = '';
+function createCards(data) {
+  const container = document.querySelector("#main-container"); // parent container for all card sets
 
-  const title = document.createElement("h4");
+  data.forEach(section => {
+    // Create one .card-container per section
+    const cardContainer = document.createElement("div");
+    cardContainer.classList.add("card-container");
 
-  const cardContents = document.createElement("div");
-  cardContents.classList.add("card-contents");
-
-  const link = document.createElement("p");
-
-  e.forEach(product => {
-
-    const cardContent = document.createElement("div");
-    cardContent.classList.add("card-content");
-
-    const image = document.createElement("img");
-    const desc = document.createElement("p");
-
-    image.setAttribute("src", product.productImg);
-    image.setAttribute("loading", "lazy");
-    image.setAttribute("alt", `${product.productDesc} Image`);
-
-    title.textContent = product.productTitle;
-    desc.textContent = product.productDesc;
-    link.textContent = product.linkDesc;
-
+    // Title
+    const title = document.createElement("h4");
+    title.textContent = section.sectionTitle;
     cardContainer.appendChild(title);
 
-    cardContent.appendChild(image);
-    cardContent.appendChild(desc);
+    // Products wrapper
+    const cardContents = document.createElement("div");
+    cardContents.classList.add("card-contents");
 
-    cardContents.appendChild(cardContent);
+    section.products.forEach(product => {
+      const cardContent = document.createElement("div");
+      cardContent.classList.add("card-content");
+
+      const image = document.createElement("img");
+      image.src = product.img;
+      image.alt = `${product.desc} Image`;
+
+      const desc = document.createElement("p");
+      desc.textContent = product.desc;
+
+      cardContent.appendChild(image);
+      cardContent.appendChild(desc);
+      cardContents.appendChild(cardContent);
+    });
+
     cardContainer.appendChild(cardContents);
-    cardContainer.appendChild(link);
+
+    // Link
+    const linkP = document.createElement("p");
+    const link = document.createElement("a");
+    link.href = "#";
+    link.textContent = section.linkText;
+    linkP.appendChild(link);
+
+    cardContainer.appendChild(linkP);
+
+    // Append this whole section to the main container
+    container.appendChild(cardContainer);
   });
 }
