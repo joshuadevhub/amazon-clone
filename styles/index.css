@@ -303,6 +303,10 @@ main .amazon-links {
   color: var(--background-color);
 }
 
+.account-profile p {
+  padding-left: 0.8rem;
+}
+
 .card-container {
   margin: 2.1rem 0.8rem;
 }
@@ -335,11 +339,39 @@ main .amazon-links {
   margin-top: 1rem;
 }
 
-.card-container p a {
+.card-container p a,
+.account-profile p a {
   text-decoration: none;
   color: var(--secondary-color);
 }
 
 main {
   background-color: var(--background-color);
+}
+
+.top-pick-container {
+  padding: 0 0.8rem 0 0.8rem;
+}
+
+.top-picks {
+  margin-top: 1rem;
+}
+
+.top-pick-content {
+  display: grid;
+  grid-template-columns: 180px auto;
+  margin-bottom: 1rem;
+  /* align-items: center; */
+}
+
+.top-pick-content>div>p:first-child {
+  padding: 0.5rem 0;
+}
+
+.top-pick-content img {
+  width: 160px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  /* padding: 1rem 0; */
 }
