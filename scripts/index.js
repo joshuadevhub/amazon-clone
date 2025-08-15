@@ -52,13 +52,23 @@ const sections = [
       { img: "images/laptop-smal-original.webp", desc: "PC Accessories" },
     ],
     linkText: "See More",
+  },
+  {
+    sectionTitle: "Gear Up To Get Fit",
+    products: [
+      { img: "images/headphone-original.webp", desc: "Desktop" },
+      { img: "images/laptop-smal-original.webp", desc: "Laptop" },
+      { img: "images/headphone-original.webp", desc: "Hard Drives" },
+      { img: "images/laptop-smal-original.webp", desc: "PC Accessories" },
+    ],
+    linkText: "Shop More",
   }
 ];
 
 createCards(sections);
 
 function createCards(data) {
-  const container = document.querySelector("#main-container"); // parent container for all card sets
+  const container = document.getElementsByClassName("main-container"); // parent container for all card sets
 
   data.forEach(section => {
     // Create one .card-container per section
@@ -102,6 +112,83 @@ function createCards(data) {
     cardContainer.appendChild(linkP);
 
     // Append this whole section to the main container
-    container.appendChild(cardContainer);
+    for (let i = 0; i < container.length; i++) {
+      container[i].appendChild(cardContainer.cloneNode(true));
+    }
+  });
+}
+
+
+
+const secondSection = [
+  {
+    sectionTitle: "Top Picks For Nigeria",
+    products: [
+      {
+        productImage: "images/laptop-smal-original.webp",
+        productDesc1: "DEWALT 20V MAX Cordless Drill and Impact Driver PO...",
+        productDesc2: "$179<sup>00</sup> <sub>List $259.00"
+      },
+
+      {
+        productImage: "images/laptop-smal-original.webp",
+        productDesc1: "DEWALT 20V MAX Cordless Drill and Impact Driver PO...",
+        productDesc2: "$179<sup>00</sup> <sub>List $259.00"
+      },
+      {
+        productImage: "images/laptop-smal-original.webp",
+        productDesc1: "DEWALT 20V MAX Cordless Drill and Impact Driver PO...",
+        productDesc2: "$179<sup>00</sup> <sub>List $259.00"
+      }
+    ],
+  },
+]
+
+createSectionCard(secondSection);
+
+function createSectionCard(secondData) {
+  const secondContainer = document.getElementsByClassName("second-main-container");
+
+  secondData.forEach(section => {
+    const topPickContainer = document.createElement("div");
+    topPickContainer.classList.add("top-pick-container");
+
+    const title = document.createElement("h4");
+    title.textContent = section.sectionTitle;
+    topPickContainer.appendChild(title);
+
+    const topPicksContainer = document.createElement("div");
+    topPicksContainer.classList.add("top-picks");
+
+    section.products.forEach(card => {
+      const topPickContent = document.createElement("div");
+      topPickContent.classList.add("top-pick-content");
+
+      const topPickContentImage = document.createElement("img");
+      topPickContentImage.src = card.productImage;
+      topPickContentImage.alt = `${card.productDesc1} Image`;
+      topPickContentImage.loading = "lazy";
+
+      topPickContent.appendChild(topPickContentImage);
+
+      const strayDiv = document.createElement("div");
+      const productDesc = document.createElement("p");
+      productDesc.innerHTML = card.productDesc1;
+
+      const productDescs = document.createElement("p");
+      productDescs.innerHTML = card.productDesc2;
+
+      strayDiv.appendChild(productDesc);
+      strayDiv.appendChild(productDescs);
+
+      topPickContent.appendChild(strayDiv);
+      topPicksContainer.appendChild(topPickContent)
+    });
+    topPickContainer.appendChild(topPicksContainer);
+
+    for (let i = 0; i < secondContainer.length; i++) {
+      secondContainer[i].appendChild(topPickContainer.cloneNode(true));
+    }
+    // secondContainer.appendChild(topPickContainer);
   });
 }
