@@ -392,3 +392,50 @@ main {
   aspect-ratio: 16 / 9;
   /* padding: 1rem 0; */
 }
+
+#full-container,
+#full-containers {
+  padding: 1rem 0.8rem 0 0.8rem;
+}
+
+#full-container img,
+#full-containers img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 2;
+  object-fit: cover;
+  border-radius: 10px;
+  padding-top: 0.5rem;
+}
+
+footer {
+  background-color: var(--another-color);
+  margin: 0.6rem 0 0 0;
+}
+
+footer .first-footer-content {
+  /* background-color: green; */
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem 0.8rem;
+}
+
+footer .first-footer-content nav ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 13px;
+}
+
+footer .first-footer-content a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: none;
+  }
+}
