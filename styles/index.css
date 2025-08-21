@@ -413,13 +413,15 @@ footer {
   margin: 0.6rem 0 0 0;
 }
 
-footer .first-footer-content {
+footer .first-footer-content,
+footer .second-footer-content {
   /* background-color: green; */
   width: 90%;
   display: flex;
   align-items: center;
   margin: 0 auto;
   padding: 1rem 0.8rem;
+  border-bottom: 2px solid white;
 }
 
 footer .first-footer-content nav ul {
@@ -429,10 +431,15 @@ footer .first-footer-content nav ul {
   gap: 13px;
 }
 
-footer .first-footer-content a {
+footer .first-footer-content a,
+footer .second-footer-content a {
   color: #fff;
   text-decoration: none;
 }
+
+/* footer .second-footer-content {
+  margin-top: 1rem;
+} */
 
 @media screen and (min-width: 768px) {
   body {
