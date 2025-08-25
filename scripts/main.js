@@ -1,4 +1,52 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // JavaScript For The Footer
+  const firstFooterContent = [
+    "Amazon.com",
+    "Your Order",
+    "Your List",
+    "Gift Card",
+    "Registy & Gift Lists",
+    "Find a Gift",
+    "Your Account",
+    "Browsing History",
+    "Sell Product On Amazon",
+    "Your Returns",
+    "Recalls & Products Safety Alert",
+    "Customer Services",
+  ];
+
+  const secondFooterContent = [
+    "Recalls & Products Safety Alert",
+    "Customer Service",
+  ];
+
+  createFooterCard(firstFooterContent, "first-footer-content");
+  createFooterCard(secondFooterContent, "second-footer-content")
+
+  function createFooterCard(items, classname) {
+    const footer = document.querySelector("footer");
+
+    const section = document.createElement("div");
+    section.classList.add(classname);
+
+    const nav = document.createElement("nav");
+    const ul = document.createElement("ul");
+
+    items.forEach(item => {
+      const li = document.createElement("li");
+      const anchorTag = document.createElement("a");
+
+      anchorTag.href = "#";
+      anchorTag.textContent = item;
+
+      li.appendChild(anchorTag);
+      ul.appendChild(li);
+    });
+    nav.appendChild(ul);
+    section.appendChild(nav);
+    footer.appendChild(section);
+  }
+
   // JavaScript For The Open and Close Menu
   const hamBugger = document.getElementById("menu-icon");
   const sideBar = document.getElementById("side-bar");
@@ -30,4 +78,5 @@ document.addEventListener("DOMContentLoaded", () => {
       dropdownContainer.innerText = `See All`;
     }
   });
+
 });

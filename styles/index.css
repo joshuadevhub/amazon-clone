@@ -503,6 +503,9 @@ footer .second-footer-content {
   padding: 1rem 0.8rem;
   border-bottom: 2px solid white;
 }
+footer li{
+  list-style: none;
+}
 
 footer .first-footer-content nav ul {
   display: grid;
