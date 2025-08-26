@@ -441,7 +441,7 @@ form .form-content{
 .form-content input{
   width: 100%;
   padding: .85rem .50rem;
-  border: 1px solid var(--background-color);
+  border: 2px solid var(--background-color);
   border-radius: 12px;
   outline: none;
   background-color: #f0f0f0;
@@ -473,7 +473,7 @@ form input[type="submit"]{
 .last-content p a{
   text-decoration: none;
   font-size: 1.1rem;
-  color: var(--accent-color);
+  /* color: var(--primary-color); */
 }
 
 .hr{
@@ -485,6 +485,9 @@ form input[type="submit"]{
 
 .last-content h4{
   padding-bottom: 0.8rem;
+}
+.form-content .success input:user-invalid:invalid{
+  border:2px solid red;
 }
 
 /* Styles For Footer */
