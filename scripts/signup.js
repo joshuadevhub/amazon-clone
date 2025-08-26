@@ -7,4 +7,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     showResult();
   });
+
+  function showResult() {
+    const phoneOrEmailValue = phoneOrEmail.value.trim();
+
+    if (phoneOrEmailValue === '') {
+      setErrorFor(phoneOrEmail, "This Field Is Required!");
+    } else{
+      setSuccessFor();
+    }
+  }
+
+  function setErrorFor(input, value) {
+    const formControl = input.parentElement;
+    const errorMessage = formControl.querySelector("#error-message");
+    errorMessage.textContext = value;
+    formControl.className = "form-content error"
+  }
 })

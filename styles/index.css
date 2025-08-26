@@ -486,10 +486,17 @@ form input[type="submit"]{
 .last-content h4{
   padding-bottom: 0.8rem;
 }
-.form-content .success input:user-invalid:invalid{
+form .error input:user-invalid:invalid{
   border:2px solid red;
 }
-
+form .success input:valid{
+  border:2px solid green;
+}
+#error-message{
+  color: red;
+  padding-left: 10px;
+  font-size: 0.8rem;
+}
 /* Styles For Footer */
 footer {
   background-color: var(--another-color);
