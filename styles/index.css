@@ -419,6 +419,13 @@ main {
 /* Styles For The Signup Page */
 .form-container{
   margin:0.8rem;
+  position: relative;
+}
+.form-container a svg{
+  fill: var(--text-color);
+  position: absolute;
+  top: -0.2rem;
+  left: -0.4rem;
 }
 .form-container h3{
   padding-bottom: 1rem;
@@ -431,6 +438,7 @@ form{
 }
 form .form-content{
   padding-bottom: 1rem;
+  position: relative;
 }
 
 .form-content label{
@@ -445,7 +453,21 @@ form .form-content{
   border-radius: 12px;
   outline: none;
   background-color: #f0f0f0;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+}
+.icon-error{
+  fill: red;
+  bottom: 3.05rem;
+  position: absolute;
+  right: 0.8rem;
+  display: none;
+}
+.icon-success{
+  fill: green;
+  display: none;
+  bottom: 2.1rem;
+  position: absolute;
+  right: 0.8rem;
 }
 form input[type="submit"]{
   width: 90%;
@@ -472,7 +494,7 @@ form input[type="submit"]{
 .form-container .terms p a, 
 .last-content p a{
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   /* color: var(--primary-color); */
 }
 
@@ -484,7 +506,10 @@ form input[type="submit"]{
 }
 
 .last-content h4{
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.5rem;
+}
+.last-content1{
+  margin-top: 1rem;
 }
 form .error input{
   border:2px solid red;
