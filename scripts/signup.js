@@ -14,14 +14,21 @@ document.addEventListener("DOMContentLoaded", () => {
     if (phoneOrEmailValue === '') {
       setErrorFor(phoneOrEmail, "This Field Is Required!");
     } else{
-      setSuccessFor();
+      setSuccessFor(phoneOrEmail);
     }
   }
 
   function setErrorFor(input, value) {
     const formControl = input.parentElement;
     const errorMessage = formControl.querySelector("#error-message");
-    errorMessage.textContext = value;
-    formControl.className = "form-content error"
+    errorMessage.textContent = value;
+    formControl.className = "form-content error";
+  }
+
+  function setErrorFor(input) {
+    const formControl = input.parentElement;
+    // const errorMessage = formControl.querySelector("#error-message");
+    // errorMessage.textContent = value;
+    formControl.className = "form-content success";
   }
 })
