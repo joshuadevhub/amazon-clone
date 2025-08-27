@@ -6,19 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
       sectionTitle: "Level Up Your PC Here",
       products: [
         { img: "images/commercialPc.webp", desc: "Comm Pc" },
-        { img: "images/laptop-smal-original.webp", desc: "Tracker" },
-        { img: "images/headphone-original.webp", desc: "Equiptment" },
-        { img: "images/laptop-smal-original.webp", desc: "Deals" },
+        { img: "images/gpu.webp", desc: "Computer GPU" },
+        { img: "images/laptop.webp", desc: "Laptop" },
+        { img: "images/mouse.webp", desc: "Mouse" },
       ],
       linkText: "Shop More",
     },
     {
       sectionTitle: "Unveil Your Radiance",
       products: [
-        { img: "images/headphone-original.webp", desc: "Desktop" },
-        { img: "images/laptop-smal-original.webp", desc: "Laptop" },
-        { img: "images/headphone-original.webp", desc: "Hard Drives" },
-        { img: "images/laptop-smal-original.webp", desc: "PC Accessories" },
+        { img: "images/menClothing.webp", desc: "Men Clothing" },
+        { img: "images/diamond.webp", desc: "Diamond" },
+        { img: "images/model.webp", desc: "Model" },
+        { img: "images/bag.webp", desc: "Bag" },
       ],
       linkText: "See More",
     },
@@ -82,19 +82,19 @@ document.addEventListener("DOMContentLoaded", () => {
       sectionTitle: "Top Picks For Nigeria",
       products: [
         {
-          productImage: "images/laptop-smal-original.webp",
-          productDesc1: "DEWALT 20V MAX Cordless Drill and Impact Driver PO...",
+          productImage: "images/kitchenCabinet.webp",
+          productDesc1: "Compact, affordable, and widely used in homes for daily cooking.",
           productDesc2: "$179<sup>00</sup> <sub>List $259.00"
         },
 
         {
-          productImage: "images/headphone-original.webp",
-          productDesc1: "DEWALT 20V MAX Cordless Drill and Impact Driver PO...",
+          productImage: "images/standingFan.webp",
+          productDesc1: "A must-have due to power supply issues; many Nigerians buy rechargeable or solar-powered fans.",
           productDesc2: "$179<sup>00</sup> <sub>List $259.00"
         },
         {
-          productImage: "images/laptop-smal-original.webp",
-          productDesc1: "DEWALT 20V MAX Cordless Drill and Impact Driver PO...",
+          productImage: "images/mobilePhone.webp",
+          productDesc1: "Affordable Android phones with good battery life and camera, very popular in Nigeria.",
           productDesc2: "$179<sup>00</sup> <sub>List $259.00"
         }
       ],
