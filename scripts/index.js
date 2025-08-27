@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       sectionTitle: "Level Up Your PC Here",
       products: [
-        { img: "images/headphone-original.webp", desc: "Clothing" },
+        { img: "images/commercialPc.webp", desc: "Comm Pc" },
         { img: "images/laptop-smal-original.webp", desc: "Tracker" },
         { img: "images/headphone-original.webp", desc: "Equiptment" },
         { img: "images/laptop-smal-original.webp", desc: "Deals" },
