@@ -23,11 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (passwordValue === "") {
       setErrorFor(password, "This field is required!");
+    } else if (passwordValue.length < 4) {
+      setErrorFor(password, "Password Must Not Be lesser Than 4 Characters!");
+    } else if (passwordValue.length > 8) {
+      setErrorFor(password, "Password Must Not Be Greater Than 8 Characters!");
     } else {
       setSuccessFor(password);
     }
   }
-  phoneOrEmail.addEventListener("input", showResult);
 
   // Simple email validation
   function isValidEmail(email) {
@@ -38,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function isValidPhone(phone) {
     return /^0\d{10}$/.test(phone);
   }
+
+  phoneOrEmail.addEventListener("input", showResult);
+  password.addEventListener("input", showResult);
 
   function showResult() {
     const phoneOrEmailValue = phoneOrEmail.value.trim();
@@ -53,10 +59,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (passwordValue === "") {
       clearState(password);
+    } else if (passwordValue.length < 4) {
+      setErrorFor(password, "Password Must Not Be lesser Than 4 Characters!");
     } else if (passwordValue.length > 8) {
       setErrorFor(password, "Password Must Not Be Greater Than 8 Characters!");
-    } else if (passwordValue.length < 5) {
-      setErrorFor(password, "Password Must Not Be lesser Than 4 Characters!");
     } else {
       setSuccessFor(password);
     }
@@ -79,10 +85,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (value) {
       formControl.classList.add("error");
 
-      const iconError = document.querySelector(".icon-error");
+      const iconError = formControl.querySelector(".icon-error");
       iconError.style.display = "block";
 
-      const successError = document.querySelector(".icon-success");
+      const successError = formControl.querySelector(".icon-success");
       successError.style.display = "none";
     } else {
       formControl.classList.remove("error");
@@ -98,10 +104,35 @@ document.addEventListener("DOMContentLoaded", () => {
     formControl.classList.remove("error");
     formControl.classList.add("success");
 
-    const iconError = document.querySelector(".icon-error");
+    const iconError = formControl.querySelector(".icon-error");
     iconError.style.display = "none";
     
-    const successError = document.querySelector(".icon-success");
+    const successError = formControl.querySelector(".icon-success");
     successError.style.display = "block";
   }
+});
+
+const showPassword = document.querySelector(".eye");
+const HidePassword = document.querySelector(".eye-off");
+
+password.addEventListener("input", () => {
+  if (password.value.length > 0) {
+    showPassword.style.display = "block";
+  } else {
+    HidePassword.style.display = "none";
+    showPassword.style.display = "none";
+    password.type = "password";
+  }
+});
+
+showPassword.addEventListener("click", () => {
+  password.type = "text";
+  HidePassword.style.display = "block";
+  showPassword.style.display = "none";
+});
+
+HidePassword.addEventListener("click", () => {
+  password.type = "password";
+  HidePassword.style.display = "none";
+  showPassword.style.display = "block";
 });
