@@ -457,7 +457,7 @@ form .form-content{
 }
 .icon-error{
   fill: red;
-  bottom: 2rem;
+  bottom: 3rem;
   position: absolute;
   right: 0.3rem;
   display: none;
