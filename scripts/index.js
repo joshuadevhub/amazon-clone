@@ -252,10 +252,10 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       sectionTitle: "Gear Up To Get Fit",
       products: [
-        { img: "images/headphone-original.webp", desc: "Desktop" },
-        { img: "images/laptop-smal-original.webp", desc: "Laptop" },
-        { img: "images/headphone-original.webp", desc: "Hard Drives" },
-        { img: "images/laptop-smal-original.webp", desc: "PC Accessories" },
+        { img: "images/yogaMats.webp", desc: "Yoga Mats" },
+        { img: "images/fitnessTracker.webp", desc: "Fitness Tracker" },
+        { img: "images/dumbells.webp", desc: "Dumbells" },
+        { img: "images/sneakers.webp", desc: "Sneakers" },
       ],
       linkText: "Shop More",
     }
