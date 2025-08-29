@@ -83,18 +83,18 @@ document.addEventListener("DOMContentLoaded", () => {
       products: [
         {
           productImage: "images/kitchenCabinet.webp",
-          productDesc1: "Compact, affordable, and widely used in homes for daily cooking.",
+          productDesc1: "Compact, affordable, and widely used in....",
           productDesc2: "$179<sup>00</sup> <sub>List $259.00"
         },
 
         {
           productImage: "images/standingFan.webp",
-          productDesc1: "A must-have due to power supply issues; many Nigerians buy rechargeable or solar-powered fans.",
+          productDesc1: "A must-have due to power supply issues; many Nigerians....",
           productDesc2: "$179<sup>00</sup> <sub>List $259.00"
         },
         {
           productImage: "images/mobilePhone.webp",
-          productDesc1: "Affordable Android phones with good battery life and camera, very popular in Nigeria.",
+          productDesc1: "Affordable Android phones with good battery life and....",
           productDesc2: "$179<sup>00</sup> <sub>List $259.00"
         }
       ],
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const fullContainerArr = [
     {
       sectionTitle: "Travel Essentials For Your Next Trip",
-      image: "images/tracker.jpg",
+      image: "images/luaggages.webp",
     }
   ];
 
@@ -182,20 +182,20 @@ document.addEventListener("DOMContentLoaded", () => {
       sectionTitle: "Popular Products In Beauty Internationally",
       products: [
         {
-          productImage: "images/laptop-smal-original.webp",
-          productDesc1: "DEWALT 20V MAX Cordless Drill and Impact Driver PO...",
-          productDesc2: "$179<sup>00</sup> <sub>List $259.00"
+          productImage: "images/perfumes.webp",
+          productDesc1: "Internationally loved fragrances that define personal style....",
+          productDesc2: "$19<sup>00</sup> <sub>List $259.00"
         },
 
         {
-          productImage: "images/headphone-original.webp",
-          productDesc1: "DEWALT 20V MAX Cordless Drill and Impact Driver PO...",
-          productDesc2: "$179<sup>00</sup> <sub>List $259.00"
+          productImage: "images/skincareProducts.webp",
+          productDesc1: "Glow-boosting skincare serums loved worldwide for hydration and anti-aging....",
+          productDesc2: "$17<sup>00</sup> <sub>List $259.00"
         },
         {
-          productImage: "images/laptop-smal-original.webp",
-          productDesc1: "DEWALT 20V MAX Cordless Drill and Impact Driver PO...",
-          productDesc2: "$179<sup>00</sup> <sub>List $259.00"
+          productImage: "images/haircareProducts.webp",
+          productDesc1: "Essential haircare solutions for shine, strength, and everyday styling...",
+          productDesc2: "$15<sup>00</sup> <sub>List $259.00"
         }
       ],
     },
@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const fullContainerArrs = [
     {
       sectionTitle: "Must Have Deals For Everyone",
-      image: "images/tracker.jpg",
+      image: "images/mustdeals.webp",
     }
   ];
 
