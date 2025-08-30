@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const form1 = document.querySelector("#form1");
+  const personalFirstName = document.querySelector("#personalfirstname");
+  const personalLastName = document.querySelector("#personallastname");
+  const personalEmail = document.querySelector("#personalemail");
+  const personalPassword = document.querySelector("#personalpassword");
+
+  form1.addEventListener("click", () => {
+    e.preventDefault();
+
+    showResult();
+  });
+
+
   const personalButton = document.querySelector("#personal-button");
   const businessButton = document.querySelector("#business-button");
   const formContainers1 = document.querySelector("#form-containers1");
