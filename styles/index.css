@@ -446,16 +446,16 @@ form .form-content{
   padding: 0 0.5rem 0.2rem 0;
 }
 
-.form-content input{
+.form-content input, .form-content select{
   width: 100%;
   padding: .85rem .50rem;
-  border: 2px solid var(--background-color);
-  border-radius: 12px;
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
   outline: none;
   background-color: #f0f0f0;
   font-size: 1.05rem;
 }
-.icon-error{
+/* .icon-error{
   fill: red;
   bottom: 3rem;
   position: absolute;
@@ -468,7 +468,7 @@ form .form-content{
   bottom: 2rem;
   position: absolute;
   right: 0.3rem;
-}
+} */
 .eye-off, .eye{
   fill: var(--text-color);
   position: absolute;
@@ -477,13 +477,13 @@ form .form-content{
   display: none;
 }
 form input[type="submit"]{
-  width: 90%;
+  width: 100%;
   padding: .85rem .45rem;
   border: none;
   background-color: var(--primary-color);
   color: var(--background-color);
   outline: none;
-  border-radius: 12px;
+  border-radius: 3rem;
   font-size: 1.2rem;
   font-weight: bold;
   margin: 0.2rem auto;
@@ -491,7 +491,8 @@ form input[type="submit"]{
 }
 .form-container .terms{
   /* background-color: red; */
-  margin: 0.3rem 0 1rem 0;
+  margin: 0.3rem 0 0 0;
+  font-size: 0.8rem;
 }
 
 .form-container .terms p:first-child{
@@ -528,6 +529,118 @@ form .success input{
   color: red;
   padding-left: 10px;
   font-size: 0.8rem;
+}
+
+/* Styles For Create Account.html */
+.form-containers{
+  margin:0.8rem;
+}
+.form-container .form-user-choice{
+  width: 100%;
+  border: 1px solid var(--secondary-color);
+  border-radius: 3rem;
+  /* margin-bottom: 1rem; */
+}
+.form-container .form-user-choice .form-content1{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 0.1rem;
+}
+.form-user-choice .form-content1 button{
+  padding: .5rem 0;
+  border-radius: 1.5rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid white;
+  outline: none;
+  background-color: #fff;
+}
+.form-user-choice .form-content1 .active{
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
+.form-container .form-content2{
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.form-container .form-content2 input{
+  width: 100%;
+  padding: .70rem .55rem;
+  border-radius: 10px;
+  outline: none;
+  border:0.05rem solid var(--secondary-color);
+  font-size: 1.05rem;
+  background-color: #f0f0f0;
+}
+.form-container .form-content2 input:focus, 
+.form-user-choice .form-content1 button:focus
+{
+  outline: none;
+}
+.form-content3 {
+  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+
+}
+.form-content3 hr{
+  background-color: var(--secondary-color);
+  display: block;
+}
+.form-content3 p{
+  text-align: center;  
+}
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.social-icons .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 2.5rem;
+  padding: 0.6rem 1.2rem;
+  width: max-content; 
+}
+.social-icons img {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+.social-icons a{
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.checkbox input{
+  width: 18px;
+  height: 18px;
+}
+.checkbox label{
+  padding-left: 0.6rem;
+  color: var(--text-color);
+  vertical-align: top;
 }
 /* Styles For Footer */
 footer {

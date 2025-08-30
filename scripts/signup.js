@@ -85,11 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (value) {
       formControl.classList.add("error");
 
-      const iconError = formControl.querySelector(".icon-error");
-      iconError.style.display = "block";
+      // const iconError = formControl.querySelector(".icon-error");
+      // iconError.style.display = "block";
 
-      const successError = formControl.querySelector(".icon-success");
-      successError.style.display = "none";
+      // const successError = formControl.querySelector(".icon-success");
+      // successError.style.display = "none";
     } else {
       formControl.classList.remove("error");
       // formControl.classList.remove("icon-error");
@@ -104,11 +104,11 @@ document.addEventListener("DOMContentLoaded", () => {
     formControl.classList.remove("error");
     formControl.classList.add("success");
 
-    const iconError = formControl.querySelector(".icon-error");
-    iconError.style.display = "none";
+    // const iconError = formControl.querySelector(".icon-error");
+    // iconError.style.display = "none";
     
-    const successError = formControl.querySelector(".icon-success");
-    successError.style.display = "block";
+    // const successError = formControl.querySelector(".icon-success");
+    // successError.style.display = "block";
   }
 });
 
