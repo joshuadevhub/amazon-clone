@@ -25,7 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const personalPasswordValue = personalPassword.value.trim();
 
     if (personalFirstNameValue === '') {
-      setErrorFor(personalFirstName, "This Field Cannot Be Empty!");
+      clearState(personalFirstName);
+    } else if (personalFirstNameValue) {
+      setErrorFor(personalFirstName, "This Input Must Not Contain Joshua");
     } else {
       setSuccessFor(personalFirstName);
     }
@@ -47,6 +49,15 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       setSuccessFor(personalPassword);
     }
+  }
+
+  function clearState(input) {
+    formControl = input.parentElement;
+    errorMessage = formControl.querySelector(".error-message");
+    errorMessage.textContent = '';
+
+    formControl.classList.remove("error");
+    formControl.classList.remove("success");
   }
 
   function setErrorFor(input, message) {
