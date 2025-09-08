@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   
   function clearState(input) {
-    formControl = input.parentElement;
-    errorMessage = formControl.querySelector(".error-message");
+    const formControl = input.parentElement;
+    const errorMessage = formControl.querySelector(".error-message");
     errorMessage.textContent = '';
     formControl.classList.remove("error");
     formControl.classList.remove("success");
