@@ -642,6 +642,65 @@ form .success input{
   color: var(--text-color);
   vertical-align: top;
 }
+
+
+
+/* Styles For The Modal Message and Container */
+
+.modal-container{
+  width: 60%;
+  max-width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%); /* Start: off-screen at bottom */
+  opacity: 0;
+
+  /* Animation */
+  animation: slideToCenter 2s ease-out forwards;
+}
+.modal-message{
+  font-size: 0.8rem;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal-message h3{
+  padding-top: 0.6rem;
+}
+
+.modal-container p{
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+}
+.modal-container button{
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: var(--another-color);
+  color: var(--background-color);
+}
+
+@keyframes slideToCenter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -160%);
+  }
+}
 /* Styles For Footer */
 footer {
   background-color: var(--another-color);

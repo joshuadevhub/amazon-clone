@@ -149,4 +149,11 @@ document.addEventListener("DOMContentLoaded", () => {
     formContainers2.style.display = "block";
   });
 
+  const modalContainer = document.querySelector(".modal-container")
+  const modalButton = document.querySelector("#modal-button");
+
+  modalButton.addEventListener('click', () => {
+    modalContainer.style.display = 'none';
+  });
+
 });
