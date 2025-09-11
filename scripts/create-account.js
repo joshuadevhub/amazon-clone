@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const personalLastName = document.querySelector("#personallastname");
   const personalEmail = document.querySelector("#personalemail");
   const personalPassword = document.querySelector("#personalpassword");
-
-
+  const modalContainer = document.querySelector(".modal-container")
+  const modalButton = document.querySelector("#modal-button");
 
   // Regular Expressions For Name And Email
   const isValidName = /^[A-Za-z]+$/
@@ -16,7 +16,46 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     showResult();
     validateOnSubmit();
-    // showModalMessage();
+
+
+    if (isFormValid()) {
+      const main = document.querySelector("main");
+      modalContainer.classList.add("show");      // fade in modal
+      document.body.classList.add("blurred"); 
+      modalContainer.style.display = "block";
+      form1.reset();
+
+      const formControls = form1.querySelectorAll(".form-content");
+      formControls.forEach(content => {
+        content.classList.remove("error");
+        content.classList.remove("success");
+
+        const errorMessage = content.querySelector(".error-message");
+        if (errorMessage) {
+          errorMessage.textContent = '';
+        }
+      })
+    }
+  });
+
+  function isFormValid() {
+    const formControls = form1.querySelectorAll(".form-content");
+    let valid = true;
+
+    formControls.forEach(control => {
+      if (control.classList.contains("error") || !control.classList.contains("success")) {
+        valid = false;
+      }
+    });
+
+    return valid;
+  }
+
+
+  modalButton.addEventListener('click', () => {
+    modalContainer.style.display = 'none';
+    modalContainer.classList.remove("show");   // fade out modal
+    document.body.classList.remove("blurred"); 
   });
 
   personalFirstName.addEventListener("input", showResult);
@@ -147,13 +186,6 @@ document.addEventListener("DOMContentLoaded", () => {
     personalButton.classList.remove("active");
     formContainers1.style.display = "none";
     formContainers2.style.display = "block";
-  });
-
-  const modalContainer = document.querySelector(".modal-container")
-  const modalButton = document.querySelector("#modal-button");
-
-  modalButton.addEventListener('click', () => {
-    modalContainer.style.display = 'none';
   });
 
 });

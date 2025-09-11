@@ -25,6 +25,13 @@ body {
   color: var(--text-color);
   display: flex;
   flex-direction: column;
+  transition: filter 0.3s ease;
+}
+
+body.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
 }
 
 header .header-container .nav-bar {
@@ -655,14 +662,23 @@ form .success input{
   margin: 0 auto;
   display: none;
   position: fixed;
+  pointer-events: none; 
   top: 50%;
   left: 50%;
   transform: translate(-50%, 100%); /* Start: off-screen at bottom */
   opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
 
   /* Animation */
   animation: slideToCenter 2s ease-out forwards;
 }
+
+.modal-container.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .modal-message{
   font-size: 0.8rem;
   color: var(--text-color);
@@ -670,7 +686,14 @@ form .success input{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transform: scale(0.8);     /* start slightly smaller */
+  transition: transform 0.3s ease;
 }
+
+.modal-container.show .modal {
+  transform: scale(1);       /* zoom in when active */
+}
+
 .modal-message h3{
   padding-top: 0.6rem;
 }
