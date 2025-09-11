@@ -187,4 +187,28 @@ document.addEventListener("DOMContentLoaded", () => {
     formContainers2.style.display = "block";
   });
 
+  const showPassowrd = document.querySelector(".eye");
+  const hidePassword = document.querySelector(".eye-off");
+
+  personalPassword.addEventListener("input", () => {
+    if (personalPassword.value.length > 0){
+      showPassowrd.style.display = 'block'
+    } else{
+      showPassowrd.style.display = 'none';
+      hidePassword.style.display = 'none';
+      personalPassword.type = 'password';
+    }
+  });
+
+  hidePassword.addEventListener("click", () => {
+    personalPassword.type = 'password';
+    showPassowrd.style.display = 'block';
+    hidePassword.style.display = 'none';
+  });
+
+  showPassowrd.addEventListener("click", () => {
+    personalPassword.type = 'text';
+    showPassowrd.style.display = 'none';
+    hidePassword.style.display = 'block';
+  });
 });

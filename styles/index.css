@@ -481,8 +481,8 @@ form .form-content{
 .eye-off, .eye{
   fill: var(--text-color);
   position: absolute;
-  right: 2rem;
-  top: 2.25rem;
+  right: 0.6rem;
+  top: 0.9rem;
   display: none;
 }
 form input[type="submit"]{
@@ -670,7 +670,7 @@ form .success input{
   transform: translate(-50%, 100%); /* Start: off-screen at bottom */
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 9999;
+  /* z-index: 9999; */
 
   /* Animation */
   animation: slideToCenter 2s ease-out forwards;
