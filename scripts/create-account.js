@@ -19,10 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     if (isFormValid()) {
-      const main = document.querySelector("main");
-      modalContainer.classList.add("show");      // fade in modal
-      document.body.classList.add("blurred"); 
       modalContainer.style.display = "block";
+      modalContainer.classList.add("show");      // fade in modal
+      document.querySelector("#form-containers1").classList.add("blurred"); 
       form1.reset();
 
       const formControls = form1.querySelectorAll(".form-content");
@@ -55,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   modalButton.addEventListener('click', () => {
     modalContainer.style.display = 'none';
     modalContainer.classList.remove("show");   // fade out modal
-    document.body.classList.remove("blurred"); 
+    document.querySelector("#form-containers1").classList.remove("blurred"); 
   });
 
   personalFirstName.addEventListener("input", showResult);
