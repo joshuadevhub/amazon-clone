@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modalContainer.classList.add("show");      // fade in modal
       document.body.classList.add("blurred"); 
       modalContainer.style.display = "block";
+
       form1.reset();
 
       const formControls = form1.querySelectorAll(".form-content");
