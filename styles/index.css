@@ -25,6 +25,7 @@ body {
   color: var(--text-color);
   display: flex;
   flex-direction: column;
+  display: none;
 }
 #form-containers1{
   transition: filter 0.3s ease;
