@@ -7,6 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalContainer = document.querySelector(".modal-container")
   const modalButton = document.querySelector("#modal-button");
 
+  const username = document.querySelector("#userName");
+  
+  function updateUsername() {
+    const personalFirstNameValue = personalFirstName.value.trim();
+    const personalLastNameValue = personalLastName.value.trim();
+    username.textContent = personalFirstNameValue + " " + personalLastNameValue;
+  }
+
+  personalFirstName.addEventListener("input", updateUsername);
+  personalLastName.addEventListener("input", updateUsername);
+  
   // Regular Expressions For Name And Email
   const isValidName = /^[A-Za-z]+$/
   const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
